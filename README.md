@@ -11,3 +11,17 @@
 10. I am going to test reducer
 11. I am going to upload the source to github
 12. I am going to deploy the source to production by docker and jenkins
+
+
+# Installation
+1. clone the source
+    git clone https://github.com/caiyuantian/elmo_frontend.git
+
+2. Install dependencies
+    npm install
+
+3. Run the test
+    npm run test
+
+4. Start the server
+    npm start

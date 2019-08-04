@@ -14,7 +14,6 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "jest",
-    "grunt": "grunt",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
@@ -33,15 +32,8 @@
     "@types/redux-saga-tester": "^1.0.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "grunt": "^1.0.4",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-ts": "^6.0.0-beta.22",
     "identity-obj-proxy": "^3.0.0",
     "node-fetch": "^2.6.0",
-    "redux-saga-test-plan": "^4.0.0-beta.3",
-    "redux-saga-tester": "^1.0.514",
-    "redux-saga-testing": "^1.0.5",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
   }

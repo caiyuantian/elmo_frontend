@@ -1,12 +1,11 @@
 import * as React from 'react';
 import './App.css';
+import { Redirect } from 'react-router-dom';
 
 class App extends React.Component {
     public render() {
         return (
-            <div className="App">
-                <h1 className="App-title">Twitter User Query</h1>
-            </div>
+            <Redirect to='/users' />
         );
     }
 }

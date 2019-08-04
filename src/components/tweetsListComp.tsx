@@ -28,7 +28,7 @@ class TweetsListComp extends React.Component<IProps> {
         if (selectedUserTweets.length > 0) {
             for (const tweet of selectedUserTweets) {
                 usersItems.push(
-                    <Grid key={tweet.id_str} container={true} spacing={0} justify="center" >
+                    <Grid key={tweet.id_str} container={true} spacing={2} justify="center" >
                         <Grid item={true} xs={4}>
                             <Card>
                                 <Input fullWidth={true} disableUnderline={true} value={"Post Time:" +

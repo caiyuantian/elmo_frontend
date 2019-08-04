@@ -33,7 +33,7 @@ class UserSummany extends React.Component<IProps> {
         if (usersList.length > 0) {
             for (const user of usersList) {
                 usersItems.push(
-                    <Grid key={user.id_str} container={true} spacing={0} justify="center" >
+                    <Grid key={user.id_str} container={true} spacing={2} justify="center" >
                         <Grid item={true} xs={4}>
                             <Card>
                                 <Link component={RouterLink} to={"/user/" + user.id_str}>

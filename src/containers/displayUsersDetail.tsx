@@ -23,6 +23,9 @@ class DisplayUsersDetail extends React.Component<IStateProps, {}> {
 
         return (
             <div>
+                <div className="App">
+                    <h1 className="App-title">Twitter User Query</h1>
+                </div>
                 <div>
                     <UserDetail selectedUser={selectedUser} />
                 </div>

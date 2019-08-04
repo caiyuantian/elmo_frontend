@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.usersList {
+  text-align: center;
+  display: 'flex';
+}
+
+li {
+  list-style-type: none;
+  margin: 10px;
+}
+
+.usersList li:hover {
+  background-color: rgb(240, 237, 208);
+  cursor: pointer;
+}

@@ -1,13 +1,9 @@
-FROM node:alpine
+FROM nginx:alpine
 
-RUN mkdir -p /home/elmo/frontend/
+COPY ./build /var/www
 
-COPY . /home/elmo/frontend/
-
-WORKDIR /home/elmo/frontend/
-
-RUN npm install serve
+COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 3000
 
-CMD ["serve","-s","build", "-l", "3000"]
+ENTRYPOINT ["nginx","-g","daemon off;"]

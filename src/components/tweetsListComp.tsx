@@ -6,13 +6,14 @@ import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 
 export interface IProps {
-    selectedUserTweets: state.TweetsList;
+    selectedUserTweets: state.TweetsList | undefined
 }
 
 
 class TweetsListComp extends React.Component<IProps> {
     render() {
         const { selectedUserTweets } = this.props;
+
         const usersItems = new Array();
 
         function convert(labelValue: number) {
@@ -25,7 +26,7 @@ class TweetsListComp extends React.Component<IProps> {
                         : Math.abs(Number(labelValue)).toString();
         }
 
-        if (selectedUserTweets.length > 0) {
+        if (selectedUserTweets) {
             for (const tweet of selectedUserTweets) {
                 usersItems.push(
                     <Grid key={tweet.id_str} container={true} spacing={2} justify="center" >

@@ -145,3 +145,20 @@ test('Search Bar - find <Typography>', () => {
     const { wrapper } = setup5();
     expect(wrapper.find(Typography).exists());
 })
+
+const setup6 = () => {
+    const props = {
+        selectedUser: undefined
+    }
+
+    const wrapper = Enzyme.shallow(<UserDetail {...props} />)
+    return {
+        props,
+        wrapper
+    }
+}
+
+test('Search Bar - find <Typography>', () => {
+    const { wrapper } = setup6();
+    expect(wrapper.find(Typography).exists());
+})

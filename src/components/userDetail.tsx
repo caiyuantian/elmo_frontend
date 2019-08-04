@@ -9,7 +9,7 @@ import { Link, Button } from '@material-ui/core'
 import { Link as RouterLink } from 'react-router-dom';
 
 export interface IProps {
-    selectedUser: state.IUserDetail;
+    selectedUser: state.IUserDetail | undefined
 }
 
 class UserDetail extends React.Component<IProps> {
@@ -27,25 +27,26 @@ class UserDetail extends React.Component<IProps> {
         }
 
         const displayStr = new Array();
-        displayStr.push(
-            <Grid key="userSummary" container={true} spacing={0} justify="center" >
-                <Grid item={true} xs={4}>
-                    <Card>
-                        <Avatar alt="Remy Sharp" src={selectedUser.profile_image_url} />
-                        <Input fullWidth={true} disableUnderline={true} value={selectedUser.name} />
-                        <Input fullWidth={true} disableUnderline={true} value={"@" + selectedUser.screen_name} />
-                        <Typography color="textSecondary" align="left">
-                            {selectedUser.description}
-                        </Typography>
-                        <Input fullWidth={true} disableUnderline={true}
-                            value={"Location: " + selectedUser.location} />
-                        <Input fullWidth={true} disableUnderline={true} value={convert(selectedUser.friends_count) +
-                            " Following    " + convert(selectedUser.followers_count) + " Followers"} />
-                    </Card>
+        if (selectedUser) {
+            displayStr.push(
+                <Grid key="userSummary" container={true} spacing={0} justify="center" >
+                    <Grid item={true} xs={4}>
+                        <Card>
+                            <Avatar alt="Remy Sharp" src={selectedUser.profile_image_url} />
+                            <Input fullWidth={true} disableUnderline={true} value={selectedUser.name} />
+                            <Input fullWidth={true} disableUnderline={true} value={"@" + selectedUser.screen_name} />
+                            <Typography color="textSecondary" align="left">
+                                {selectedUser.description}
+                            </Typography>
+                            <Input fullWidth={true} disableUnderline={true}
+                                value={"Location: " + selectedUser.location} />
+                            <Input fullWidth={true} disableUnderline={true} value={convert(selectedUser.friends_count) +
+                                " Following    " + convert(selectedUser.followers_count) + " Followers"} />
+                        </Card>
+                    </Grid>
                 </Grid>
-            </Grid>
-        )
-
+            )
+        }
         return (
             <div>
                 <Grid key="userSummary" container={true} spacing={0} justify="center" >

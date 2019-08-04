@@ -142,3 +142,19 @@ test('Search Bar - find <Typography>', () => {
     const { wrapper } = setup7();
     expect(wrapper.find(Typography).exists());
 })
+
+const setup8 = () => {
+    const props = {
+        selectedUserTweets: undefined
+    }
+    const wrapper = Enzyme.shallow(<TweetsListComp {...props} />)
+    return {
+        props,
+        wrapper
+    }
+}
+
+test('Search Bar - find <Typography>', () => {
+    const { wrapper } = setup8();
+    expect(wrapper.find(Typography).exists());
+})

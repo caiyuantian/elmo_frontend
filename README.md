@@ -25,3 +25,6 @@
 
 4. Start the server
     npm start
+
+5. Start page
+    http://localhost:3000/users

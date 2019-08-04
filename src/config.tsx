@@ -1,5 +1,5 @@
 const config = {
-    backendAddress: 'http://localhost:5000',
+    backendAddress: 'http://35.240.169.167:5000',
     defaultPageSize: 10,
 }
 

@@ -24,9 +24,6 @@ class DisplayUsersList extends React.Component<IStateProps & IDispatchProps & IO
         const { usersList, onClickSearchButton } = this.props;
         return (
             <div className='usersList'>
-                <div className="App">
-                    <h1 className="App-title">Twitter User Query</h1>
-                </div>
                 <div>
                     <SearchBar onClickSearchButton={onClickSearchButton} />
                 </div>

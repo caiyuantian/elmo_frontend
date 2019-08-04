@@ -1,11 +1,14 @@
 import * as React from 'react';
 import './App.css';
-import { Redirect } from 'react-router-dom';
+import { Link } from '@material-ui/core'
+import { Link as RouterLink } from 'react-router-dom';
 
 class App extends React.Component {
     public render() {
         return (
-            <Redirect to='/users' />
+            <div className="App">
+                <Link component={RouterLink} to="/users">Twitter User Query</Link>
+            </div>
         );
     }
 }
